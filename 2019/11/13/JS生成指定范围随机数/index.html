@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript,面试," />
 
 
 
@@ -84,13 +84,15 @@
 
 
 
-<meta name="description" content="Now or Never.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="rLydia的游乐场">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;rLydia&#x2F;myBlog&#x2F;index.html">
+<meta name="description" content="相关面试题： (01) 用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值  相关知识12345Math.random()    &#x2F;&#x2F; [0,1) 伪随机数 浮点数Math.ceil()      &#x2F;&#x2F; 向上取整Math.floor()     &#x2F;&#x2F; 向下取整Math.round()     &#x2F;&#x2F; 四舍五入parseInt()  &#x2F;&#x2F; 取整数部分  1234Math.ceil(Ma">
+<meta name="keywords" content="Javascript,面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS生成指定范围随机数">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;rLydia&#x2F;myBlog&#x2F;2019&#x2F;11&#x2F;13&#x2F;JS%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E9%9A%8F%E6%9C%BA%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="rLydia的游乐场">
-<meta property="og:description" content="Now or Never.">
+<meta property="og:description" content="相关面试题： (01) 用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值  相关知识12345Math.random()    &#x2F;&#x2F; [0,1) 伪随机数 浮点数Math.ceil()      &#x2F;&#x2F; 向上取整Math.floor()     &#x2F;&#x2F; 向下取整Math.round()     &#x2F;&#x2F; 四舍五入parseInt()  &#x2F;&#x2F; 取整数部分  1234Math.ceil(Ma">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-13T09:14:00.419Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/rLydia/myBlog/"/>
+  <link rel="canonical" href="https://github.com/rLydia/myBlog/2019/11/13/JS生成指定范围随机数/"/>
 
 
 
 
 
-  <title>rLydia的游乐场</title>
+  <title>JS生成指定范围随机数 | rLydia的游乐场</title>
   
 
 
@@ -146,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/rlydia" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -252,9 +253,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -284,9 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/myBlog/2019/11/13/JS%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E9%9A%8F%E6%9C%BA%E6%95%B0/" itemprop="url">JS生成指定范围随机数</a></h1>
+          <h1 class="post-title" itemprop="name headline">JS生成指定范围随机数</h1>
         
 
         <div class="post-meta">
@@ -389,9 +388,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>相关面试题：</p>
 <p>(01) 用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</p>
 </blockquote>
@@ -423,8 +420,6 @@
 <p>参考：<br><a href="https://www.cnblogs.com/starof/p/4988516.html" target="_blank" rel="noopener">https://www.cnblogs.com/starof/p/4988516.html</a><br><a href="https://www.hangge.com/blog/cache/detail_1872.html" target="_blank" rel="noopener">https://www.hangge.com/blog/cache/detail_1872.html</a></p>
 </blockquote>
 
-          
-        
       
     </div>
     
@@ -439,214 +434,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/rLydia/myBlog/myBlog/2019/11/13/Leetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lydia Ran">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myBlog/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rLydia的游乐场">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/myBlog/2019/11/13/Leetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95/" itemprop="url">Leetcode141,142环形链表快慢指针解法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-13T16:49:28+08:00">
-                2019-11-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/myBlog/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/myBlog/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/myBlog/tags/Javascript/" rel="tag"># Javascript</a>
           
-
+            <a href="/myBlog/tags/%E9%9D%A2%E8%AF%95/" rel="tag"># 面试</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  548
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Leetcode 141 与 Leetcode 142 题类似，Leetcode 141 为判断链表是否有环，而Leetcode 142在判断若有环基础上返回起始环的节点。 </p>
-<h2 id="Leetcode-141"><a href="#Leetcode-141" class="headerlink" title="Leetcode 141"></a>Leetcode 141</h2><blockquote>
-<p>Given a linked list, determine if it has a cycle in it.<br>Follow up:<br>Can you solve it without using extra space? </p>
-</blockquote>
-<p>分析： 设置一个快指针fast、一个慢指针slow。由于我们知道若有环，快慢指针将一直”跑”下，没有终点，并且快慢指针一定会相遇；如同在没有设置终点暂停的情况下，两人从同一起点出发以不同速度在环形跑道上跑步，跑得快的同学最终会出现比跑得慢的同学多跑一圈并且相遇的情形。 这里设置为快指针跑两步时，慢指针跑一步，两者速度比为2:1。 </p>
-<p>Python代码： </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> slow <span class="keyword">and</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Leetcode-142"><a href="#Leetcode-142" class="headerlink" title="Leetcode 142"></a>Leetcode 142</h2><blockquote>
-<p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.<br>Note: Do not modify the linked list.<br>Follow up:<br>Can you solve it without using extra space? </p>
-</blockquote>
-<p>分析：此题在 Leetcode 141的基础上，添加了若有环即返回其环起始位置的步骤。同 Leetcode 141分析中所述，若设定快指针每跑两步，慢指针跑一步，两者速度比为2:1，即在相同时间内，两者跑得距离之比也为2:1。如图，当有环时，设置b点为环的起始位置，m点为快慢指针第一次相遇的位置，hb距离为x1，b到m距离为x2，m到b的距离为x3。由于同一起点出发，在相同时间内两者跑的距离之比为2:1，所以当他们在m点相遇时有 x1+x2+x3+x2 = 2(x1+x2)，即x1 = x3。 </p>
-<p><img src=".%5CLeetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95%5Cimage.png" alt="image"></p>
-<p>当快慢指针在m点相遇后，慢指针从m点出发，head指针从h点同时出发并以相同的速度前行，由于x1=x3，因此两者会在b点，即环的起始位置相遇。 </p>
-<p> Python代码： </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        slow = fast = head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            <span class="keyword">if</span> slow == fast:</span><br><span class="line">                <span class="keyword">while</span> slow != head:</span><br><span class="line">                    slow = slow.next</span><br><span class="line">                    head = head.next</span><br><span class="line">                <span class="keyword">return</span> head</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/myBlog/2019/11/13/Leetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95/" rel="next" title="Leetcode141,142环形链表快慢指针解法">
+                <i class="fa fa-chevron-left"></i> Leetcode141,142环形链表快慢指针解法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -656,10 +475,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -667,6 +487,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -687,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -780,6 +613,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#相关知识"><span class="nav-number">1.</span> <span class="nav-text">相关知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成指定范围内的随机整数："><span class="nav-number">2.</span> <span class="nav-text">生成指定范围内的随机整数：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -919,6 +768,10 @@
 
 
   
+  <script type="text/javascript" src="/myBlog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/myBlog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
