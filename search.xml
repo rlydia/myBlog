@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>JS生成指定范围随机数</title>
+    <url>/2019/11/13/JS%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E9%9A%8F%E6%9C%BA%E6%95%B0/</url>
+    <content><![CDATA[<blockquote>
+<p>相关面试题：</p>
+<p>(01) 用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</p>
+</blockquote>
+<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Math</span>.random()    <span class="comment">// [0,1) 伪随机数 浮点数</span></span><br><span class="line"><span class="built_in">Math</span>.ceil()      <span class="comment">// 向上取整</span></span><br><span class="line"><span class="built_in">Math</span>.floor()     <span class="comment">// 向下取整</span></span><br><span class="line"><span class="built_in">Math</span>.round()     <span class="comment">// 四舍五入</span></span><br><span class="line"><span class="built_in">parseInt</span>()  <span class="comment">// 取整数部分</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">10</span>);    <span class="comment">// [0,10] 但基本相当于获取从1到10的随机整数，因取0的概率极小。</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">10</span>);   <span class="comment">// [0,10) 可均衡获取0到9的随机整数。</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*<span class="number">10</span>);   <span class="comment">// [0,10] 基本均衡获取0到10的随机整数，其中获取最小值0和最大值10的几率少一半。</span></span><br><span class="line"><span class="comment">// 因结果在0~0.4 为0，0.5到1.4为1...8.5到9.4为9，9.5到9.9为10。所以头尾的分布区间只有其他数字的一半。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Math</span>.random()  <span class="comment">// [0, 1) 随机浮点数</span></span><br><span class="line"><span class="built_in">Math</span>.random()*(m-n) + n  <span class="comment">// [n, m) 随机浮点数； m-n可看为是length</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random())    <span class="comment">// 随机获取0或1，获取几率较均衡</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*m)  <span class="comment">// 随机获取[0,m)、即[0, m-1]之间整数，获取均衡</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*m)+<span class="number">1</span>  <span class="comment">// 随机获取[1,m) 、即[1, m-1]之间整数，获取均衡</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="生成指定范围内的随机整数："><a href="#生成指定范围内的随机整数：" class="headerlink" title="生成指定范围内的随机整数："></a>生成指定范围内的随机整数：</h2><p>[min, max) :</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*(max-min)) + min </span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*(max-min)) + min</span><br></pre></td></tr></table></figure>
+
+<p>[min, max] -&gt; 相当于[min, max+1) :</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.floor(Math.random()*(max+1-min))+min</span><br></pre></td></tr></table></figure>
+
+<p>(min, max]：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.ceil(Math.random()*(max-min)) + min</span><br></pre></td></tr></table></figure>
+
+<p>(min, max) -&gt; 相当于[min+1, max) ：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.floor(Math.random()*(max-(min+1)) + min+1</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomInt</span>(<span class="params">max,min</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*(max-min)) + min </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>参考：<br><a href="https://www.cnblogs.com/starof/p/4988516.html" target="_blank" rel="noopener">https://www.cnblogs.com/starof/p/4988516.html</a><br><a href="https://www.hangge.com/blog/cache/detail_1872.html" target="_blank" rel="noopener">https://www.hangge.com/blog/cache/detail_1872.html</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Leetcode141,142环形链表快慢指针解法</title>
+    <url>/2019/11/13/Leetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95/</url>
+    <content><![CDATA[<p>Leetcode 141 与 Leetcode 142 题类似，Leetcode 141 为判断链表是否有环，而Leetcode 142在判断若有环基础上返回起始环的节点。 </p>
+<h2 id="Leetcode-141"><a href="#Leetcode-141" class="headerlink" title="Leetcode 141"></a>Leetcode 141</h2><blockquote>
+<p>Given a linked list, determine if it has a cycle in it.<br>Follow up:<br>Can you solve it without using extra space? </p>
+</blockquote>
+<p>分析： 设置一个快指针fast、一个慢指针slow。由于我们知道若有环，快慢指针将一直”跑”下，没有终点，并且快慢指针一定会相遇；如同在没有设置终点暂停的情况下，两人从同一起点出发以不同速度在环形跑道上跑步，跑得快的同学最终会出现比跑得慢的同学多跑一圈并且相遇的情形。 这里设置为快指针跑两步时，慢指针跑一步，两者速度比为2:1。 </p>
+<p>Python代码： </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> slow <span class="keyword">and</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Leetcode-142"><a href="#Leetcode-142" class="headerlink" title="Leetcode 142"></a>Leetcode 142</h2><blockquote>
+<p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.<br>Note: Do not modify the linked list.<br>Follow up:<br>Can you solve it without using extra space? </p>
+</blockquote>
+<p>分析：此题在 Leetcode 141的基础上，添加了若有环即返回其环起始位置的步骤。同 Leetcode 141分析中所述，若设定快指针每跑两步，慢指针跑一步，两者速度比为2:1，即在相同时间内，两者跑得距离之比也为2:1。如图，当有环时，设置b点为环的起始位置，m点为快慢指针第一次相遇的位置，hb距离为x1，b到m距离为x2，m到b的距离为x3。由于同一起点出发，在相同时间内两者跑的距离之比为2:1，所以当他们在m点相遇时有 x1+x2+x3+x2 = 2(x1+x2)，即x1 = x3。 </p>
+<img src="/2019/11/13/Leetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95/image.png" class="" title="image">
+
+
+
+<p>当快慢指针在m点相遇后，慢指针从m点出发，head指针从h点同时出发并以相同的速度前行，由于x1=x3，因此两者会在b点，即环的起始位置相遇。 </p>
+<p> Python代码： </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        slow = fast = head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            <span class="keyword">if</span> slow == fast:</span><br><span class="line">                <span class="keyword">while</span> slow != head:</span><br><span class="line">                    slow = slow.next</span><br><span class="line">                    head = head.next</span><br><span class="line">                <span class="keyword">return</span> head</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+</search>
