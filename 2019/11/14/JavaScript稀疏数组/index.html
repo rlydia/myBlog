@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -84,13 +84,15 @@
 
 
 
-<meta name="description" content="Now or Never.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="rLydia的游乐场">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;rLydia&#x2F;myBlog&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+<meta name="description" content="缘：Array.prototype.forEach() -MDN forEach 方法按升序为数组中含有效值的每一项执行一次callback 函数，那些已删除或者未初始化的项将被跳过（例如在稀疏数组上）。   一般来说,JavaScript中的数组是稀疏的,  也就是说,数组中的元素之间可以有空隙,因为一个数组其实就是一个键值映射。 实际上,JavaScript并没有常规的数组,所有的数组其实就">
+<meta name="keywords" content="Javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript稀疏数组">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;rLydia&#x2F;myBlog&#x2F;2019&#x2F;11&#x2F;14&#x2F;JavaScript%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84&#x2F;index.html">
 <meta property="og:site_name" content="rLydia的游乐场">
-<meta property="og:description" content="Now or Never.">
+<meta property="og:description" content="缘：Array.prototype.forEach() -MDN forEach 方法按升序为数组中含有效值的每一项执行一次callback 函数，那些已删除或者未初始化的项将被跳过（例如在稀疏数组上）。   一般来说,JavaScript中的数组是稀疏的,  也就是说,数组中的元素之间可以有空隙,因为一个数组其实就是一个键值映射。 实际上,JavaScript并没有常规的数组,所有的数组其实就">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-14T14:49:14.515Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/rLydia/myBlog/archives/2019/11/"/>
+  <link rel="canonical" href="https://github.com/rLydia/myBlog/2019/11/14/JavaScript稀疏数组/"/>
 
 
 
 
 
-  <title>归档 | rLydia的游乐场</title>
+  <title>JavaScript稀疏数组 | rLydia的游乐场</title>
   
 
 
@@ -146,7 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/rlydia" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -286,148 +288,225 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/rLydia/myBlog/2019/11/14/JavaScript%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lydia Ran">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rLydia的游乐场">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">JavaScript稀疏数组</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-14T22:48:42+08:00">
+                2019-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 3 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/14/JavaScript%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">JavaScript稀疏数组</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  354
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-14T22:48:42+08:00"
-              content="2019-11-14" >
-          11-14
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/13/JS%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E9%9A%8F%E6%9C%BA%E6%95%B0/" itemprop="url">
-              
-                <span itemprop="name">JS生成指定范围随机数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-13T17:06:58+08:00"
-              content="2019-11-13" >
-          11-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/13/Leetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95/" itemprop="url">
-              
-                <span itemprop="name">Leetcode141,142环形链表快慢指针解法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-13T16:49:28+08:00"
-              content="2019-11-13" >
-          11-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <blockquote>
+<p>缘：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="noopener">Array.prototype.forEach() -MDN</a></p>
+<p><code>forEach</code> 方法按升序为数组中含有效值的每一项执行一次<code>callback</code> 函数，那些已删除或者未初始化的项将被跳过（例如在<strong>稀疏数组</strong>上）。 </p>
+</blockquote>
+<p>一般来说,JavaScript中的数组是稀疏的,  也就是说,数组中的元素之间可以有空隙,因为一个数组其实就是一个键值映射。</p>
+<p>实际上,JavaScript并没有常规的数组,所有的数组其实就是个<strong>对象</strong>,只不过会自动管理一些”数字”属性和length属性罢了。因 JavaScript中的对象就是字符串到任意值的键值对。JavaScript中的数组根本没有索引,因为索引应该是数字,而JavaScript中数组的索引其实是字符串。arr[1]其实就是arr[“1”],给arr[“1000”] = 1,arr.length也会自动变为1001。</p>
+<p>目前,ES6中已经有了类似于Java等语言的Map类型,键可以是任意类型的值。</p>
+<ul>
+<li><p>什么是稀疏数组</p>
+</li>
+<li><p>稀疏数组的创建，一些其他情况也会生成稀疏数组 =&gt; 遍历时会跳过稀疏数组(forEach, map)=&gt; 压缩稀疏数组(filter)</p>
+<p><code>var a = new Array(3)</code></p>
+</li>
+<li><p>创建密集数组  </p>
+<p><code>var a = Array.apply(null, Array(3));</code></p>
+</li>
+<li><p>对创建密集数组方法的封装 </p>
+<p><code>_.range</code></p>
+</li>
+</ul>
+<blockquote>
+<p>参考：</p>
+<p><a href="https://www.jianshu.com/p/4bce06e283cf" target="_blank" rel="noopener">javascript稀疏数组(sparse array)</a></p>
+<p><a href="https://www.cnblogs.com/ziyunfei/archive/2012/09/16/2687165.html" target="_blank" rel="noopener">[译]JavaScript中的稀疏数组与密集数组</a></p>
+<p><a href="https://2ality.com/2012/06/dense-arrays.html" target="_blank" rel="noopener">JavaScript: sparse arrays vs. dense arrays</a></p>
+</blockquote>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/13/JS%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E9%9A%8F%E6%9C%BA%E6%95%B0/" rel="next" title="JS生成指定范围随机数">
+                <i class="fa fa-chevron-left"></i> JS生成指定范围随机数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -435,6 +514,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -687,6 +770,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
