@@ -386,7 +386,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  354
+                  340
                 </span>
               
 
@@ -429,8 +429,8 @@
 <p>缘：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="noopener">Array.prototype.forEach() -MDN</a></p>
 <p><code>forEach</code> 方法按升序为数组中含有效值的每一项执行一次<code>callback</code> 函数，那些已删除或者未初始化的项将被跳过（例如在<strong>稀疏数组</strong>上）。 </p>
 </blockquote>
-<p>一般来说,JavaScript中的数组是稀疏的,  也就是说,数组中的元素之间可以有空隙,因为一个数组其实就是一个键值映射。</p>
-<p>实际上,JavaScript并没有常规的数组,所有的数组其实就是个<strong>对象</strong>,只不过会自动管理一些”数字”属性和length属性罢了。因 JavaScript中的对象就是字符串到任意值的键值对。JavaScript中的数组根本没有索引,因为索引应该是数字,而JavaScript中数组的索引其实是字符串。arr[1]其实就是arr[“1”],给arr[“1000”] = 1,arr.length也会自动变为1001。</p>
+<p>JavaScript中的数组是稀疏的, 即数组中的元素之间可以有空隙。因为Javascript数组并不常规，所有的数组其实是对象，即一个数组就是一个键值映射。</p>
+<p>JavaScript中的对象就是字符串到任意值的键值对，而数组只不过会自动管理“数字”属性和length属性，所以JavaScript中的数组根本没有索引,因索引应该是数字,而JavaScript中数组的索引其实是字符串。例如，arr[1]其实就是arr[“1”],给arr[“1000”] = 1,arr.length也会自动变为1001。</p>
 <p>目前,ES6中已经有了类似于Java等语言的Map类型,键可以是任意类型的值。</p>
 <ul>
 <li><p>什么是稀疏数组</p>
