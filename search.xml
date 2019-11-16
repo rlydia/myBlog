@@ -8,7 +8,7 @@
 <p><code>forEach</code> 方法按升序为数组中含有效值的每一项执行一次<code>callback</code> 函数，那些已删除或者未初始化的项将被跳过（例如在<strong>稀疏数组</strong>上）。 </p>
 </blockquote>
 <p>JavaScript中的数组是稀疏的, 即数组中的元素之间可以有空隙。因为Javascript数组并不常规，所有的数组其实是对象，即一个数组就是一个键值映射。</p>
-<p>JavaScript中的对象就是字符串到任意值的键值对，而数组只不过会自动管理“数字”属性和length属性，所以JavaScript中的数组根本没有索引,因索引应该是数字,而JavaScript中数组的索引其实是字符串。例如，arr[1]其实就是arr[“1”],给arr[“1000”] = 1,arr.length也会自动变为1001。</p>
+<p>JavaScript中的对象就是字符串到任意值的键值对，而数组只不过会自动管理“数字”属性和length属性，所以JavaScript中的数组根本没有索引,因索引应该是数字,而JavaScript中数组的索引其实是字符串。例如，<code>arr[1]</code>其实就是<code>arr[&quot;1&quot;]</code>,给<code>arr[&quot;1000&quot;] = 1</code>,<code>arr.length</code>也会自动变为1001。</p>
 <p>目前,ES6中已经有了类似于Java等语言的Map类型,键可以是任意类型的值。</p>
 <ul>
 <li><p>什么是稀疏数组</p>
