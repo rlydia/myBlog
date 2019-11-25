@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="WebSocket," />
 
 
 
@@ -84,14 +84,25 @@
 
 
 
-<meta name="description" content="Now or Never.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="rLydia的游乐场">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;rLydia&#x2F;myBlog&#x2F;tags&#x2F;%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95&#x2F;index.html">
+<meta name="description" content="即时通信技术 相关文章: 轮询、长轮询、长连接、websocket WebSocket 是什么原理？为什么可以实现持久连接？-知乎 SSE(服务器推送事件)的介绍、问题及解决 为什么不直接使用socket ,还要定义一个新的websocket 的呢？  四种Web即时通信技术对比：  从兼容性角度考虑，短轮询&amp;gt;长轮询(comet)&amp;gt;长连接(SSE)&amp;gt;WebSocket； 从性能方">
+<meta name="keywords" content="WebSocket">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WebSocket与Socket.io">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;rLydia&#x2F;myBlog&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;index.html">
 <meta property="og:site_name" content="rLydia的游乐场">
-<meta property="og:description" content="Now or Never.">
+<meta property="og:description" content="即时通信技术 相关文章: 轮询、长轮询、长连接、websocket WebSocket 是什么原理？为什么可以实现持久连接？-知乎 SSE(服务器推送事件)的介绍、问题及解决 为什么不直接使用socket ,还要定义一个新的websocket 的呢？  四种Web即时通信技术对比：  从兼容性角度考虑，短轮询&amp;gt;长轮询(comet)&amp;gt;长连接(SSE)&amp;gt;WebSocket； 从性能方">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;7.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;8.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;2.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;3.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;5.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;6.png">
+<meta property="og:updated_time" content="2019-11-25T07:08:45.321Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;WebSocket%E4%B8%8ESocket-io&#x2F;7.png">
 
 
 
@@ -121,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/rLydia/myBlog/tags/数据结构与算法/"/>
+  <link rel="canonical" href="https://github.com/rLydia/myBlog/2019/11/25/WebSocket与Socket-io/"/>
 
 
 
 
 
-  <title>标签: 数据结构与算法 | rLydia的游乐场</title>
+  <title>WebSocket与Socket.io | rLydia的游乐场</title>
   
 
 
@@ -146,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/rlydia" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -286,54 +297,347 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>数据结构与算法<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/rLydia/myBlog/2019/11/25/WebSocket%E4%B8%8ESocket-io/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lydia Ran">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rLydia的游乐场">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/11/13/Leetcode141-142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E8%A7%A3%E6%B3%95/" itemprop="url">
-              
-                <span itemprop="name">Leetcode141,142环形链表快慢指针解法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">WebSocket与Socket.io</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-13T16:49:28+08:00"
-              content="2019-11-13" >
-          11-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-25T15:00:28+08:00">
+                2019-11-25
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/HTTP/" itemprop="url" rel="index">
+                    <span itemprop="name">HTTP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="即时通信技术"><a href="#即时通信技术" class="headerlink" title="即时通信技术"></a>即时通信技术</h1><blockquote>
+<p>相关文章:</p>
+<p><a href="https://www.cnblogs.com/huchong/p/8595644.html" target="_blank" rel="noopener">轮询、长轮询、长连接、websocket</a></p>
+<p><a href="https://www.zhihu.com/question/20215561" target="_blank" rel="noopener">WebSocket 是什么原理？为什么可以实现持久连接？-知乎</a></p>
+<p><a href="https://www.jianshu.com/p/100b82730e15" target="_blank" rel="noopener">SSE(服务器推送事件)的介绍、问题及解决</a></p>
+<p><a href="https://github.com/onlyliuxin/coding2017/issues/497">为什么不直接使用socket ,还要定义一个新的websocket 的呢？ </a></p>
+<p>四种Web即时通信技术对比：</p>
+<ul>
+<li>从兼容性角度考虑，短轮询&gt;长轮询(comet)&gt;长连接(SSE)&gt;WebSocket；</li>
+<li>从性能方面考虑，WebSocket&gt;长连接SSE&gt;长轮询&gt;短轮询。</li>
+</ul>
+<p>在HTTP基础上实现：短轮询,长轮询,长连接SSE（Sever-Sent Event） 服务器推送事件;</p>
+</blockquote>
+<h2 id="ajax-轮询-长轮询"><a href="#ajax-轮询-长轮询" class="headerlink" title="(ajax)轮询, 长轮询"></a>(ajax)轮询, 长轮询</h2><p>短轮询与长轮询两者都是 <strong>基于HTTP的“被动型服务器”</strong> : 服务器不会主动推送信息，而是在客户端发送ajax请求后进行返回的响应。</p>
+<p><strong>短轮询</strong>： 浏览器每隔一段时间向浏览器发送http请求，服务器端在收到请求后，不论是否有数据更新，都直接进行响应。 </p>
+<p><strong>长轮询</strong>：浏览器向浏览器发送http请求，服务器端在收到请求后，服务器不会直接进行响应，而是先将这个请求挂起 判断服务器端数据是否有更新。如果有更新，则进行响应，如果一直没有数据，则<strong>到达一定的时间限制</strong>(服务器端设置)才返回。 客户端JavaScript响应处理函数会在处理完服务器返回的信息后，再次发出请求，重新建立连接。</p>
+<blockquote>
+<p>目前微信登录二维码扫描还是用的长轮询 (为兼容老浏览器)；</p>
+</blockquote>
+<p>轮询由于需要不断的建立http连接，严重浪费了服务器端和客户端的资源。而长轮询和短轮询比起来，明显减少了很多不必要的http请求次数，相比之下节约了资源。长轮询的缺点在于，连接挂起也会导致资源的浪费。 </p>
+<h2 id="长连接-SSE-与WebSocket协议"><a href="#长连接-SSE-与WebSocket协议" class="headerlink" title="长连接(SSE)与WebSocket协议"></a>长连接(SSE)与WebSocket协议</h2><p>服务器对浏览器推送消息的方法：SSE与WebSocket;</p>
+<p><strong>长连接(SSE)</strong>：</p>
+<p><a href="https://www.jianshu.com/p/100b82730e15" target="_blank" rel="noopener">SSE(服务器推送事件)的介绍、问题及解决</a></p>
+<p>HTML5新增功能基于http协议,  不需要客户端发送请求，可以实现只要服务器端数据有更新，就可以马上发送到客户端；且SSE实现简单，不需要依赖其他插件。</p>
+<p><strong>WebSocket协议</strong>:</p>
+<p>(WebSocket也是一种长连接的模式)</p>
+<p>WebSocket是Html5定义的一个新协议，可以实现服务器与客户端之间全双工通信。 其是一个<strong>持久化</strong>的协议，相对于HTTP这种<strong>非持久</strong>的协议来说；可理解为WebSocket是HTTP的优化。</p>
+<blockquote>
+<p> <code>websocket</code>的协议是在TCP/IP协议簇的应用层，和<code>http</code>在同一层。 </p>
+</blockquote>
+<p>WebSocket协议基于TCP协议；客户端先发送一个HTTP请求给服务端，该请求要求服务器 将该HTTP连接升级为WS连接，在服务器端响应ok后 它们之间便不再走HTTP报文了; 之后该连接上走websocket协议，并且不会断开，信息在两端交换 (websocket协议是以消息为单位–有点像UDP，但websocket是可靠 并且有序的)；</p>
+<ul>
+<li>UDP是任意两个端口之间可以随意的发送，websocket则是只能在建立连接的两端交换消息(<strong>交换的是消息，而不是字节流</strong>)；</li>
+</ul>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/chat</span> HTTP/1.1</span><br><span class="line"><span class="attribute">Host</span>: server.example.com</span><br><span class="line"><span class="attribute">Upgrade</span>: websocket</span><br><span class="line"><span class="attribute">Connection</span>: Upgrade</span><br><span class="line"><span class="attribute">Sec-WebSocket-Key</span>: x3JJHMbDL1EzLkh9GBhXDw==</span><br><span class="line"><span class="attribute">Sec-WebSocket-Protocol</span>: chat, superchat</span><br><span class="line"><span class="attribute">Sec-WebSocket-Version</span>: 13</span><br><span class="line"><span class="attribute">Origin</span>: http://example.com</span><br></pre></td></tr></table></figure>
+
+<p>优点是实现了双向通信，缺点是服务器端的逻辑非常复杂 。</p>
+<h1 id="WebSocket与Socket"><a href="#WebSocket与Socket" class="headerlink" title="WebSocket与Socket"></a>WebSocket与Socket</h1><blockquote>
+<p><a href="https://www.jianshu.com/p/42260a2575f8" target="_blank" rel="noopener">1小时教你理解HTTP，TCP，UDP，Socket，WebSocket</a></p>
+<p><a href="https://www.cnblogs.com/devinzhang/archive/2012/01/13/2321826.html" target="_blank" rel="noopener">Socket连接与HTTP连接</a></p>
+</blockquote>
+<p>五层模型: 应用层， 传输层， 网络层， 数据链路层， 物理层；</p>
+<p>HTTP，WebSocket, TCP, UDP, IP 都是协议； </p>
+<ul>
+<li><p>HTTP，WebSocket 属于应用层，都是基于TCP协议；WebSocket可理解为HTTP的优化 </p>
+<p>— HTTP连接(短连接)</p>
+</li>
+<li><p>TCP, UDP 属于传输层 </p>
+<p>— TCP连接(长连接)</p>
+</li>
+<li><p>IP 协议属于传输层</p>
+</li>
+</ul>
+<p>TCP/IP协议族 是不同协议的组合；</p>
+<p>Socket套接字，本质是API 而不是协议，是对TCP/IP协议栈的封装 以建立Socket连接；</p>
+<ul>
+<li>创建Socket连接可以指定不同的传输层协议 – 所以当采用TCP建立连接时，该Socket连接就视为一个TCP连接。而采用UDP则是无连接的。 </li>
+</ul>
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/7.png" class="" title="image">
+
+
+
+<h1 id="WebSocket协议建立连接的过程"><a href="#WebSocket协议建立连接的过程" class="headerlink" title="WebSocket协议建立连接的过程"></a>WebSocket协议建立连接的过程</h1><h2 id="怎样使用websocket"><a href="#怎样使用websocket" class="headerlink" title="怎样使用websocket"></a>怎样使用websocket</h2><ul>
+<li><p>服务器需先支持 升级websocket的请求，而node自带的http服务器是没有这个功能的-&gt; 会返回404； =&gt; 则在npm上 找第三方的包 <a href="https://www.npmjs.com/package/ws" target="_blank" rel="noopener">ws包: a Node.js WebSocket library</a> (其需要 对HTTP协议/服务器 本身做一个接管，该接管在node中有相应的事件–这个包监听了 )</p>
+<p>普通的请求触发的是request事件, 而一个升级请求触发的是upgrade事件 <a href="https://nodejs.org/dist/latest-v12.x/docs/api/http.html" target="_blank" rel="noopener">node http.server</a></p>
+</li>
+</ul>
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/8.png" class="" title="image">
+
+
+
+<p>怎样使用ws包？</p>
+<ul>
+<li>将一个http.server对象传给它，其在该对象上监听upgrade事件；</li>
+</ul>
+<h2 id="WebSocket协议建立连接的过程-1"><a href="#WebSocket协议建立连接的过程-1" class="headerlink" title="WebSocket协议建立连接的过程"></a>WebSocket协议建立连接的过程</h2><p>在浏览器端，websocket协议是从http升级来的(在连接协商阶段依然是一个http请求)；并且<strong>websocket协议 不限制跨域</strong>，除非有CSP(Content Security Policy)内容安全策略  限制页面中的JS连接/加载东西，  =&gt; 于是可在任何网站给我服务器 发送websocket连接；</p>
+<p>让websocket服务器与HTTP服务器集成在一个server上：</p>
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/1.png" class="" title="image">
+
+<p>ws-example文件夹下的<code>ws-server.js</code>文件：</p>
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/2.png" class="" title="image">
+
+<ul>
+<li><p>若网页是通过https加载的，那么也只能用wss; wss为走在TLS(安全传输层协议)上的ws, 如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws = new WebSocket(&apos;wss://expressjs.com/foo/&apos;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>第一次发送出去的HTTP请求头：（客户端希望这个连接能够被升级upgrade 为websocket协议）</p>
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/3.png" class="" title="image">
+
+<p>若服务器能支持将协议升级的话，便会响应：</p>
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/4.png" class="" title="image">
+
+<hr>
+<p>(发送的数据还可是二进制数据Buffer) WebSocket不能直接发送对象，需是字符串</p>
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/5.png" class="" title="image">
+
+<img src="/2019/11/25/WebSocket%E4%B8%8ESocket-io/6.png" class="" title="image">
+
+<p>WebSocket(交换的是消息)建立连接后，TCP连接便不会断了，并且之间发送数据为二进制；(TCP协议为纯粹的字节流)</p>
+<p>为什么WebSocket可以实现持久连接？</p>
+<ul>
+<li>因其底层的TCP连接根本就没有断；</li>
+</ul>
+<p>既然有TCP协议为啥还要有WebSocket呢？</p>
+<ul>
+<li>TCP连接一个包只能发1500个字节，对于大一点的包会进行分包，分包后发送收到的数据次序可能有改变；而用WebSocket发送则不会有这个问题 — 大量数据 分包后收到数据次序并不会改变；</li>
+</ul>
+<h2 id="WebSocket聊天室"><a href="#WebSocket聊天室" class="headerlink" title="WebSocket聊天室"></a>WebSocket聊天室</h2><blockquote>
+<p>代码：<a href="">ws-example &gt; ws-server文件夹</a></p>
+</blockquote>
+<p>WebSocket中不能直接发送对象— 服务端<code>JSON.stringify(mes)</code>， 客户端<code>JSON.parse(e.data)</code></p>
+<p>WebSocket的send方法目前只能发送三类数据，包含UTF-8的string类型（而UTF-16指的是JavaScript中String的编码存储方式），ArrayBuffer和Blob。</p>
+<p><a href="https://juejin.im/post/5abdc38ef265da2375070008#heading-6" target="_blank" rel="noopener">WebSocket系列之JavaScript字符串如何与二进制数据间进行互相转换</a></p>
+<p>基于WebSocket更进一步的封装，提供了广播事件的机制(远程事件)； =&gt; socketio (比原始的WebSocket好用很多)</p>
+<h1 id="Socket-IO-对WebSocket的封装"><a href="#Socket-IO-对WebSocket的封装" class="headerlink" title="Socket.IO (对WebSocket的封装)"></a>Socket.IO (对WebSocket的封装)</h1><blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/23467317" target="_blank" rel="noopener">WebSocket 与 Socket.IO</a></p>
+<p><a href="https://socket.io/" target="_blank" rel="noopener">socket.io</a> 是一个封装了 Websocket、基于 Node 的 JavaScript 框架，包含 client 的 JavaScript 和 server 的 Node。其 其屏蔽了所有底层细节，让顶层调用非常简单。 </p>
+</blockquote>
+<p>因并不是所有浏览器都支持WebSocket，该库支持了一系列的降级功能；以通过这些功能选择来与浏览器保持类似长连接的功能。</p>
+<ul>
+<li>Websocket</li>
+<li>Adobe® Flash® Socket</li>
+<li>AJAX long polling</li>
+<li>AJAX multipart streaming</li>
+<li>Forever Iframe</li>
+<li>JSONP Polling</li>
+</ul>
+<h2 id="Socket-IO聊天室"><a href="#Socket-IO聊天室" class="headerlink" title="Socket.IO聊天室"></a>Socket.IO聊天室</h2><blockquote>
+<p>代码：<a href="">ws-example &gt; socket.io-wsServer文件夹</a></p>
+</blockquote>
+<p>socket.io带来的优势：</p>
+<ul>
+<li>发送数据时 可直接发送对象; 而不用像之前一样 先将对象转为字符串，在将字符串转为对象；</li>
+<li><code>socket.on(&#39;my other event&#39;, function() {})</code> 可自定义事件；这样就可不在数据中设置type字段；</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/WebSocket/" rel="tag"># WebSocket</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/14/JavaScript%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" rel="next" title="JavaScript稀疏数组">
+                <i class="fa fa-chevron-left"></i> JavaScript稀疏数组
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -341,6 +645,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -361,8 +669,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -454,6 +771,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#即时通信技术"><span class="nav-number">1.</span> <span class="nav-text">即时通信技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ajax-轮询-长轮询"><span class="nav-number">1.1.</span> <span class="nav-text">(ajax)轮询, 长轮询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#长连接-SSE-与WebSocket协议"><span class="nav-number">1.2.</span> <span class="nav-text">长连接(SSE)与WebSocket协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WebSocket与Socket"><span class="nav-number">2.</span> <span class="nav-text">WebSocket与Socket</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WebSocket协议建立连接的过程"><span class="nav-number">3.</span> <span class="nav-text">WebSocket协议建立连接的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#怎样使用websocket"><span class="nav-number">3.1.</span> <span class="nav-text">怎样使用websocket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket协议建立连接的过程-1"><span class="nav-number">3.2.</span> <span class="nav-text">WebSocket协议建立连接的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket聊天室"><span class="nav-number">3.3.</span> <span class="nav-text">WebSocket聊天室</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Socket-IO-对WebSocket的封装"><span class="nav-number">4.</span> <span class="nav-text">Socket.IO (对WebSocket的封装)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Socket-IO聊天室"><span class="nav-number">4.1.</span> <span class="nav-text">Socket.IO聊天室</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -593,6 +926,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
